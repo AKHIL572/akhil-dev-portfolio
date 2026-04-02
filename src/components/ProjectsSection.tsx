@@ -124,22 +124,33 @@ const ProjectsSection = () => {
                                     }`}
                                 style={{ transitionDelay: isVisible ? `${i * 120}ms` : "0ms" }}
                             >
-                                <div className="relative overflow-hidden h-48">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
-                                    {project.inProgress && (
-                                        <span className="absolute top-3 right-3 text-xs font-mono font-medium px-2.5 py-1 rounded-full border border-yellow-400/40 bg-yellow-400/10 text-yellow-300">
-                                            In Progress
-                                        </span>
-                                    )}
-                                </div>
+                                {project.image !== missingProjectImg && (
+                                    <div className="relative overflow-hidden h-48">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
+                                        {project.inProgress && (
+                                            <span className="absolute top-3 right-3 text-xs font-mono font-medium px-2.5 py-1 rounded-full border border-yellow-400/40 bg-yellow-400/10 text-yellow-300">
+                                                In Progress
+                                            </span>
+                                        )}
+                                    </div>
+                                )}
                                 <div className="p-8">
                                     <div className="flex items-start justify-between mb-4">
-                                        <h3 className="text-lg font-semibold leading-snug pr-4">{project.title}</h3>
+                                        <div className="flex flex-col gap-2 pr-4">
+                                            <h3 className="text-lg font-semibold leading-snug">{project.title}</h3>
+                                            {project.image === missingProjectImg && project.inProgress && (
+                                                <div className="flex">
+                                                    <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full border border-yellow-400/40 bg-yellow-400/10 text-yellow-300">
+                                                        In Progress
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </div>
                                         <div className="flex gap-3 shrink-0">
                                             {project.github !== "#" && (
                                                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">

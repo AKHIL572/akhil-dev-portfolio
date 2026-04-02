@@ -1,6 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import profileImg from "@/assets/profile.jpg";
+import resumePdf from "@/assets/Resume (2).pdf";
 
 const HeroSection = () => {
     const photoRef = useRef<HTMLDivElement>(null);
@@ -32,15 +33,20 @@ const HeroSection = () => {
                             Focused on analyzing complex datasets, building predictive models, and uncovering patterns that support better decision-making.
                         </p>
 
-                        <div className="flex items-center gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                            <a href="#projects" className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
-                                View Projects
-                            </a>
+                        <div className="flex flex-wrap items-center gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                            <div className="flex flex-wrap gap-4">
+                                <a href="#projects" className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                                    View Projects
+                                </a>
+                                <a href={resumePdf} download="Akhil_Resume.pdf" className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-medium hover:bg-secondary/80 transition-colors border border-border flex items-center justify-center">
+                                    Download Resume
+                                </a>
+                            </div>
                             <div className="flex gap-4">
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                                <a href="https://github.com/AKHIL572" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                                     <Github size={22} />
                                 </a>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                                <a href="https://www.linkedin.com/in/akhil-t-v" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                                     <Linkedin size={22} />
                                 </a>
                                 <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
