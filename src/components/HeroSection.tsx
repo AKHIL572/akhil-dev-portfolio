@@ -1,7 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import profileImg from "@/assets/profile.jpg";
-import resumePdf from "@/assets/Resume (2).pdf";
+import resumePdf from "@/assets/Akhil_TV_Resume.pdf";
 
 const HeroSection = () => {
     const photoRef = useRef<HTMLDivElement>(null);
