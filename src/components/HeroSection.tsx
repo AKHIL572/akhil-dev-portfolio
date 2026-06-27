@@ -13,7 +13,7 @@ const HeroSection = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <section className="min-h-screen flex items-center relative overflow-hidden">
+        <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
             {/* Grid background */}
             <div className="absolute inset-0 opacity-[0.03]" style={{
                 backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
@@ -27,7 +27,7 @@ const HeroSection = () => {
                             Hi, I'm <span className="gradient-text">Akhil T V</span>
                         </h1>
                         <p className="text-xl md:text-2xl font-semibold text-primary mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                            Data Scientist & ML Engineer
+                            Data Analyst & Data Scientist
                         </p>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                             Focused on analyzing complex datasets, building predictive models, and uncovering patterns that support better decision-making.

@@ -2,12 +2,36 @@ import { Brain, Database, BarChart3, Code2, Cloud, GitBranch } from "lucide-reac
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const skillGroups = [
-    { icon: <Code2 size={20} />, category: "Programming", items: ["Python", "SQL", "HTML", "CSS", "Bash"] },
-    { icon: <Brain size={20} />, category: "Machine Learning", items: ["Scikit-learn", "TF-IDF", "Cosine Similarity", "Lifetimes", "Joblib"] },
-    { icon: <BarChart3 size={20} />, category: "Analytics & Viz", items: ["Pandas", "Matplotlib", "Seaborn", "Power BI", "Google Looker Studio", "Excel", "Google Sheets"] },
-    { icon: <Database size={20} />, category: "Database & Deployment", items: ["MySQL", "Streamlit"] },
-    { icon: <Cloud size={20} />, category: "Libraries", items: ["NumPy", "SciPy"] },
-    { icon: <GitBranch size={20} />, category: "Dev Tools", items: ["Git", "GitHub", "Jupyter", "VS Code"] },
+    {
+        icon: <Code2 size={20} />,
+        category: "Programming",
+        items: ["Python", "SQL", "C", "HTML", "CSS", "LaTeX", "Markdown", "Bash"],
+    },
+    {
+        icon: <BarChart3 size={20} />,
+        category: "Analytics & Visualization",
+        items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "Power BI", "Tableau", "Excel", "Google Sheets", "Google Looker Studio"],
+    },
+    {
+        icon: <Brain size={20} />,
+        category: "Machine Learning",
+        items: ["Scikit-learn", "XGBoost", "Random Forest", "Gradient Boosting", "RandomizedSearchCV", "TF-IDF", "Cosine Similarity", "Joblib"],
+    },
+    {
+        icon: <Database size={20} />,
+        category: "Database & Query",
+        items: ["MySQL", "SQLite", "MongoDB", "Power Query"],
+    },
+    {
+        icon: <Cloud size={20} />,
+        category: "Deployment",
+        items: ["Streamlit", "Streamlit Cloud"],
+    },
+    {
+        icon: <GitBranch size={20} />,
+        category: "Dev Tools",
+        items: ["Git", "GitHub", "Jupyter Notebook", "Google Colab", "VS Code"],
+    },
 ];
 
 const SkillsSection = () => {
