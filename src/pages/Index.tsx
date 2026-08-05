@@ -1,27 +1,31 @@
+// src/pages/Index.tsx
 import Navbar from "@/components/Navbar";
+import ScrollProgress from "@/components/ScrollProgress";
 import ParticleBackground from "@/components/ParticleBackground";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import SectionDivider from "@/components/SectionDivider";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background relative">
             <ParticleBackground />
+            <ScrollProgress />
             <Navbar />
             <HeroSection />
+            <SectionDivider label="About Me" />
             <AboutSection />
+            <SectionDivider label="Tech Stack" />
             <SkillsSection />
+            <SectionDivider label="Selected Work" />
             <ProjectsSection />
+            <SectionDivider label="Get In Touch" />
             <ContactSection />
-            <footer className="border-t border-border py-8">
-                <div className="container mx-auto px-6 flex justify-between items-center">
-                    <p className="text-sm text-muted-foreground font-mono">© 2026</p>
-                    <p className="text-sm text-muted-foreground">Built with data & coffee</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 };
