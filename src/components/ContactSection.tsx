@@ -1,4 +1,4 @@
-import { Mail, ArrowUpRight, Github, Linkedin, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Clock, Send } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -96,7 +96,7 @@ const ContactSection = () => {
 
     return (
         <section id="contact" className="py-24 relative">
-            <div className="absolute top-1/3 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[120px]" />
+            <div className="absolute top-1/3 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div ref={ref} className="container mx-auto px-6 max-w-6xl">
                 {/* Header */}
@@ -113,11 +113,11 @@ const ContactSection = () => {
                     <div className={`lg:col-span-5 space-y-6 transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                         {/* Availability Badge */}
                         <div className="glass rounded-2xl p-5 flex items-center gap-4">
-                            <div className="relative">
+                            <div className="relative flex-shrink-0">
                                 <div className="w-3 h-3 rounded-full bg-emerald-400" />
                                 <div className="absolute inset-0 w-3 h-3 rounded-full bg-emerald-400 animate-ping opacity-40" />
                             </div>
-                            <div>
+                            <div className="min-w-0">
                                 <div className="text-sm font-semibold text-foreground">Available for work</div>
                                 <div className="text-xs text-muted-foreground flex items-center gap-1">
                                     <Clock size={10} />
@@ -136,7 +136,7 @@ const ContactSection = () => {
                                         href={card.href}
                                         target={card.href.startsWith("http") ? "_blank" : undefined}
                                         rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                        className={`group glass rounded-xl p-4 border border-border/40 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 ${
+                                        className={`group glass rounded-xl p-4 border border-border/40 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-0 ${
                                             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                                         }`}
                                         style={{ transitionDelay: `${200 + i * 100}ms` }}
@@ -144,10 +144,9 @@ const ContactSection = () => {
                                         <div className={`inline-flex p-2 rounded-lg ${card.bgColor} ${card.color} mb-3 group-hover:scale-110 transition-transform`}>
                                             <Icon size={16} />
                                         </div>
-                                        <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-1">{card.label}</div>
-                                        <div className="text-sm font-semibold text-foreground flex items-center gap-1">
+                                        <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-1 truncate">{card.label}</div>
+                                        <div className="text-sm font-semibold text-foreground break-all leading-tight">
                                             {card.value}
-                                            <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
                                         </div>
                                     </a>
                                 );
@@ -156,9 +155,9 @@ const ContactSection = () => {
 
                         {/* Quick Note */}
                         <div className="glass rounded-2xl p-5 border-l-2 border-primary/50">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
+                            <p className="text-sm text-muted-foreground leading-relaxed break-words">
                                 Prefer email? Drop me a line at{" "}
-                                <a href="mailto:akhilthottekkat135@email.com" className="text-primary hover:underline font-medium">
+                                <a href="mailto:akhilthottekkat135@email.com" className="text-primary hover:underline font-medium break-all">
                                     akhilthottekkat135@email.com
                                 </a>
                                 . I read every message and typically respond within a day.
@@ -189,7 +188,7 @@ const ContactSection = () => {
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder="your@example.com"
+                                            placeholder="you@example.com"
                                             required
                                             maxLength={255}
                                             className="bg-background/50 border-border/60 focus:border-primary/50 focus:ring-primary/20 transition-all"
