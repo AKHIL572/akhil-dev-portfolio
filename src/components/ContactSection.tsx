@@ -10,8 +10,8 @@ const contactCards = [
     {
         icon: Mail,
         label: "Email",
-        value: "akhil.tv@email.com",
-        href: "mailto:akhil.tv@email.com",
+        value: "akhilthottekkat135@email.com",
+        href: "mailto:akhilthottekkat135@email.com",
         color: "text-primary",
         bgColor: "bg-primary/10",
     },
@@ -158,8 +158,8 @@ const ContactSection = () => {
                         <div className="glass rounded-2xl p-5 border-l-2 border-primary/50">
                             <p className="text-sm text-muted-foreground leading-relaxed">
                                 Prefer email? Drop me a line at{" "}
-                                <a href="mailto:akhil.tv@email.com" className="text-primary hover:underline font-medium">
-                                    akhil.tv@email.com
+                                <a href="mailto:akhilthottekkat135@email.com" className="text-primary hover:underline font-medium">
+                                    akhilthottekkat135@email.com
                                 </a>
                                 . I read every message and typically respond within a day.
                             </p>
@@ -189,7 +189,7 @@ const ContactSection = () => {
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder="you@example.com"
+                                            placeholder="your@example.com"
                                             required
                                             maxLength={255}
                                             className="bg-background/50 border-border/60 focus:border-primary/50 focus:ring-primary/20 transition-all"
