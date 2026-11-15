@@ -143,18 +143,11 @@ const SkillsSection = () => {
                             <button
                                 key={group.category}
                                 onClick={() => setActiveCategory(i)}
-<<<<<<< HEAD
                                 className={`w-full flex items-center gap-3 px-5 py-4 rounded-xl text-left transition-all duration-300 ${
                                     activeCategory === i
                                         ? "bg-primary/10 border border-primary/30 text-primary"
                                         : "bg-card/30 border border-border/40 text-muted-foreground hover:bg-card/50 hover:text-foreground"
                                 }`}
-=======
-                                className={`w-full flex items-center gap-3 px-5 py-4 rounded-xl text-left transition-all duration-300 ${activeCategory === i
-                                        ? "bg-primary/10 border border-primary/30 text-primary"
-                                        : "bg-card/30 border border-border/40 text-muted-foreground hover:bg-card/50 hover:text-foreground"
-                                    }`}
->>>>>>> c46be0f (modified according to the current updations.)
                             >
                                 <div className={`p-2 rounded-lg transition-colors ${activeCategory === i ? "bg-primary/20" : "bg-muted/50"}`}>
                                     {group.icon}
@@ -222,13 +215,8 @@ const SkillsSection = () => {
                                         { label: "Expert", level: 95, min: 85, max: 100 },
                                     ].map((item) => (
                                         <div key={item.label} className="flex items-center gap-1.5">
-<<<<<<< HEAD
-                                            <div 
-                                                className="w-2.5 h-2.5 rounded-full" 
-=======
                                             <div
                                                 className="w-2.5 h-2.5 rounded-full"
->>>>>>> c46be0f (modified according to the current updations.)
                                                 style={{ backgroundColor: getProficiencyColor(item.level) }}
                                             />
                                             <span className="text-[10px] text-muted-foreground">{item.label}</span>

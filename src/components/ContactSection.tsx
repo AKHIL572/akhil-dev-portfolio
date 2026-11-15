@@ -136,14 +136,9 @@ const ContactSection = () => {
                                         href={card.href}
                                         target={card.href.startsWith("http") ? "_blank" : undefined}
                                         rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-<<<<<<< HEAD
                                         className={`group glass rounded-xl p-4 border border-border/40 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-0 ${
                                             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                                         }`}
-=======
-                                        className={`group glass rounded-xl p-4 border border-border/40 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 min-w-0 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                                            }`}
->>>>>>> c46be0f (modified according to the current updations.)
                                         style={{ transitionDelay: `${200 + i * 100}ms` }}
                                     >
                                         <div className={`inline-flex p-2 rounded-lg ${card.bgColor} ${card.color} mb-3 group-hover:scale-110 transition-transform`}>

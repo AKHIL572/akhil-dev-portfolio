@@ -31,15 +31,9 @@ type Project = {
 
 const dataAnalystProjects: Project[] = [
     {
-<<<<<<< HEAD
-        title: "Brazilian E-Commerce SQL & Power BI Analysis",
-        description: "Full analytics pipeline on 100K+ Olist orders across 9 relational tables in MySQL. Wrote 78 SQL queries across 5 complexity levels — window functions, subqueries, and referential integrity modeling.",
-        tags: ["MySQL", "SQL", "Power BI", "DAX", "Window Functions"],
-=======
-        title: "E-Commerce Sales & Delivery Data Analysis: SQL Pipeline & Power BI",
+        title: "E-Commerce Marketplace Intelligence: SQL Analytics Pipeline & Power BI",
         description: "End-to-end analytics pipeline on 100K+ marketplace orders across a 9-table Snowflake schema in MySQL. 78 SQL queries across 5 complexity levels — window functions, RFM segmentation and statistical analysis — feeding a 4-page Power BI dashboard covering revenue, delivery performance, customer retention and geographic insights.",
         tags: ["MySQL", "SQL", "Power BI", "DAX", "Window Functions", "RFM"],
->>>>>>> c46be0f (modified according to the current updations.)
         github: "https://github.com/AKHIL572/olist-ecommerce-sql-analysis",
         live: "#",
         image: projectBrazilian,
@@ -57,26 +51,6 @@ const dataAnalystProjects: Project[] = [
         metricLabel: "Transactions",
     },
     {
-<<<<<<< HEAD
-        title: "Spotify User Insights Dashboard",
-        description: "Analyzed 50,000 Spotify users across 12 countries. Built 11 DAX measures covering churn rate, retention, and premium adoption. 5-page Power BI dashboard.",
-        tags: ["Power BI", "DAX", "Excel", "EDA", "Dashboard"],
-        github: "https://github.com/AKHIL572/spotify-user-insights-powerbi",
-        live: "#",
-        image: projectSpotify,
-        metric: "50K",
-        metricLabel: "Users Analyzed",
-    },
-    {
-        title: "Flipkart Pricing & Discount Analysis",
-        description: "Analyzed 15,800+ Flipkart listings to uncover pricing strategy. Products under ₹500 receive ~46% average discounts. Interactive Power BI dashboard.",
-        tags: ["Python", "Pandas", "Power BI", "EDA"],
-        github: "https://github.com/AKHIL572/flipkart-pricing-discount-analysis",
-        live: "#",
-        image: projectFlipkart,
-        metric: "15.8K",
-        metricLabel: "Products",
-=======
         title: "Spotify User Behavior Analysis",
         description: "End-to-end analysis of a 50,050-row Spotify-style user dataset: quality assessment across 15 issue types, 17 engineered features, 6 statistical tests (chi-square & ANOVA), a 10-sheet Excel workbook (486 formulas, 5 charts), and a 5-page Power BI dashboard with 29 charts and 25 KPI cards.",
         tags: ["Python", "Pandas", "SciPy", "Power BI", "DAX", "Excel", "EDA"],
@@ -95,7 +69,6 @@ const dataAnalystProjects: Project[] = [
         image: projectFlipkart,
         metric: "19,920",
         metricLabel: "Listings Analyzed",
->>>>>>> c46be0f (modified according to the current updations.)
     },
     {
         title: "Netflix Content Analysis Dashboard",
@@ -189,14 +162,8 @@ const INITIAL_COUNT = 4;
 
 const ProjectCard = ({ project, index, isVisible }: { project: Project; index: number; isVisible: boolean }) => (
     <div
-<<<<<<< HEAD
-        className={`group relative rounded-2xl overflow-hidden border border-border/50 bg-card/40 hover:bg-card/70 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-        }`}
-=======
         className={`group relative rounded-2xl overflow-hidden border border-border/50 bg-card/40 hover:bg-card/70 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
->>>>>>> c46be0f (modified according to the current updations.)
         style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
     >
         {/* Image */}
@@ -323,18 +290,10 @@ const ProjectsSection = () => {
                                 <button
                                     key={tab.key}
                                     onClick={() => setActiveTab(tab.key)}
-<<<<<<< HEAD
-                                    className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                                        activeTab === tab.key
-                                            ? "text-primary-foreground bg-primary shadow-lg shadow-primary/20"
-                                            : "text-muted-foreground hover:text-foreground"
-                                    }`}
-=======
                                     className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.key
                                             ? "text-primary-foreground bg-primary shadow-lg shadow-primary/20"
                                             : "text-muted-foreground hover:text-foreground"
                                         }`}
->>>>>>> c46be0f (modified according to the current updations.)
                                 >
                                     {tab.label}
                                     <span className={`ml-1.5 text-[10px] font-mono ${activeTab === tab.key ? "text-primary-foreground/70" : "text-muted-foreground/60"}`}>
@@ -361,14 +320,8 @@ const ProjectsSection = () => {
                                     href={project.live !== "#" ? project.live : project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-<<<<<<< HEAD
-                                    className={`group glass rounded-xl p-5 border border-border/40 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 ${
-                                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                                    }`}
-=======
                                     className={`group glass rounded-xl p-5 border border-border/40 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                                         }`}
->>>>>>> c46be0f (modified according to the current updations.)
                                     style={{ transitionDelay: `${200 + i * 100}ms` }}
                                 >
                                     <div className="flex items-start justify-between mb-3">

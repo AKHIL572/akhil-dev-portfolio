@@ -51,18 +51,11 @@ const Navbar = () => {
     return (
         <>
             <nav
-<<<<<<< HEAD
                 className={`fixed top-0 w-full z-50 transition-all duration-500 ${
                     scrolled
                         ? "bg-background/70 backdrop-blur-2xl border-b border-border/50 shadow-lg shadow-black/5"
                         : "bg-transparent"
                 }`}
-=======
-                className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled
-                        ? "bg-background/70 backdrop-blur-2xl border-b border-border/50 shadow-lg shadow-black/5"
-                        : "bg-transparent"
-                    }`}
->>>>>>> c46be0f (modified according to the current updations.)
             >
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                     {/* Logo - Icon only */}
@@ -89,18 +82,11 @@ const Navbar = () => {
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => { e.preventDefault(); handleClick(link.href); }}
-<<<<<<< HEAD
                                     className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                                         isActive
                                             ? "text-primary bg-primary/10"
                                             : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                                     }`}
-=======
-                                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${isActive
-                                            ? "text-primary bg-primary/10"
-                                            : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                                        }`}
->>>>>>> c46be0f (modified according to the current updations.)
                                 >
                                     {link.label}
                                     {isActive && (
@@ -123,14 +109,9 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <div
-<<<<<<< HEAD
                     className={`md:hidden overflow-hidden transition-all duration-500 ${
                         mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
                     }`}
-=======
-                    className={`md:hidden overflow-hidden transition-all duration-500 ${mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-                        }`}
->>>>>>> c46be0f (modified according to the current updations.)
                 >
                     <div className="container mx-auto px-6 pb-4 space-y-1">
                         {links.map((link) => {
@@ -140,18 +121,11 @@ const Navbar = () => {
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => { e.preventDefault(); handleClick(link.href); }}
-<<<<<<< HEAD
                                     className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
                                         isActive
                                             ? "text-primary bg-primary/10"
                                             : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                                     }`}
-=======
-                                    className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${isActive
-                                            ? "text-primary bg-primary/10"
-                                            : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                                        }`}
->>>>>>> c46be0f (modified according to the current updations.)
                                 >
                                     {link.label}
                                 </a>
