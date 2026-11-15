@@ -1,7 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail, Sparkles, TrendingUp, Database, Brain } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import profileImg from "@/assets/profile.jpg";
-import resumePdf from "@/assets/Akhil_TV_Resume.pdf";
+import resumePdf from "@/assets/Akhil_TV_Data_Analyst_Resume.pdf";
 
 const statChips = [
     { label: "Records Analyzed", target: 700, decimals: 0, suffix: "K+", icon: Database },
